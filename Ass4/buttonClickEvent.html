@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    First Name : <input id="f-name" type="text"><br><br>
+    Last Name : <input id="l-name" type="text"><br><br>
+    Mobile number : <input id="mb" type="text"><br><br>
+    Email ID : <input id="eid" type="text"><br><br>
+    <button id="clickme" onclick="clickme()">Click</button>
+    
+    <script>
+
+        function clickme()
+        {
+            var fnm = document.getElementById("f-name").value
+            var lnm = document.getElementById("l-name").value
+            var mbno = document.getElementById("mb").value
+            var emlid = document.getElementById("eid").value
+            
+            document.write(fnm)
+            document.write(lnm)
+            document.write(mbno)
+            document.write(emlid)
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <select id="selectNow">
+            <option value="one"> C </option>
+            <option value="two"> C++ </option>
+            <option value="three"> Java </option>
+            <option value="apple"> DSA </option>
+            <option value="pear"> DB </option>
+            <option value="ban"> Python </option>
+            <option value="orange"> Android </option>
+        </select>
+        <input type="button" onclick="remove()" value="Click to Remove">
+    </form>
+    
+    <script>
+        function remove() {
+            var x = document.getElementById("selectNow");
+            x.remove(x.selectedIndex);
+        }  
+    </script>
+</body>
+
+</html>

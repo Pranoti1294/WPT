@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight Bold Words</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+<p id="paragraph">
+  This is a <b>simple</b> We have just started this section for the users(beginner to intermediate)who 
+  want to work with Various javaScript problem and write scripts online to test their javaScript skill<b>bold</b> words.
+</p>
+
+<a href="#" id="highlightLink">Mouse</a>
+
+<script>
+document.getElementById('highlightLink').addEventListener('mouseover', function() {
+  var paragraph = document.getElementById('paragraph');
+  var text = paragraph.innerText;
+  var wordsToHighlight = ['We', 'this', 'beginner', 'intermediate', 'javaScript', 'bold','various','skill']; // Add words you want to highlight here
+  wordsToHighlight.forEach(function(word) {
+    var regEx = new RegExp('\\b' + word + '\\b', 'gi');
+    text = text.replace(regEx, '<span class="highlight">' + word + '</span>');
+  });
+  paragraph.innerHTML = text;
+});
+
+document.getElementById('highlightLink').addEventListener('mouseout', function() {
+  var paragraph = document.getElementById('paragraph');
+  paragraph.innerHTML = paragraph.innerText;
+});
+</script>
+
+</body>
+</html>
